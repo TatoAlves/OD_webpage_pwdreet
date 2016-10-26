@@ -1,0 +1,40 @@
+body {
+  background-color: currentColor;
+}
+.flogo {
+  margin: 10px 80px 10px 50px;
+  display: block;
+}
+
+bdoy .fml {
+  margin: 100%;
+  padding: 10px 70px 10px 70px;
+  display: block;
+}
+
+div.panel-body.container{
+  max-height: 100%;
+  max-width: 100%;
+  width: 40%
+}
+
+body .label {
+  color: #081385;
+  font-size: 20px;
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
+}
+body .input {
+  display: inline-block;
+  float: left;
+}
+body #updatep{
+  display: block;
+  float: right;
+}
+footer .well {
+  text-align: center;
+}

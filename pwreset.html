@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<meta name="description">
+
+			<title>Reset Password Apple</title>
+  		<meta name="author" content="Gabriel Guilherme e Otavio Alves">
+
+
+
+			<link rel="stylesheet" href="css/reset.css">
+  		<link rel="stylesheet" href="css/styles.css">
+			<!-- Here links cdn to Bootstrap/AJAX/JS-->
+
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+			<script type="text/javascript" src="js/validate_form.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="container-fluid flogo">
+			<img src="img/concxlogo_business-983x3001.png" style="max-height:25%;max-width:50%;" id="logotop">
+		</div>
+
+		<!-- NAVBAR -->
+
+		<nav class="container-fluid navbar navbar-default">
+			<div class="container">
+				<div class="nav navbar-header nv">
+					<a class="navbar-brand" href="index.html">Sobre</a>
+				</div>
+				<div class="navbar-collapse collapse nv">
+					<ul class="nav navbar-nav">
+						<li class="nav-link"><a href="userinfo.html">Administração de Usuários</a></li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li class="nav-link active"><a href="pwreset.html">Reset de Senha</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- CONTENT -->
+		<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"></h3>
+				</div>
+				<div class="panel-body container">
+					<form action="pwreseted.php" class="fml"method="POST">
+						<div>
+							<label for="username" class="label">Usuário:</label>
+							<input type="text" name="username" id="username" placeholder="nome.sobrenome" onchange="checkName();" pattern="/\w+\.\w+/g" title="Escreve nome.sobrenome" required /><br><br>
+						</div>
+						<div>
+							<label for="pwd1" class="label">Nova Senha:</label>
+							<input type="password" name="pwd1" id="pwd1" placeholder="Exemplo:Welcome01" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required /><br><br>
+						</div>
+						<div>
+							<label for="pwd2" class="label">Confirmar Nova Senha:</label>
+							<input type="password" name="pwd2" id="pwd2" placeholder="Ex:Welcome01" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup="checkPwd();" required /><br><br>
+							<span id="confirmMessage" class="confirmMessage"></span>
+						</div>
+
+						<input type="submit" value="Redefinir" class="btn btn-primary" id="updatep" disabled="true">
+					</form>
+				</div>
+		</div>
+
+
+	</body>
+	<!-- FOOTER -->
+	<footer>
+		<div class="well">
+			<p>© 2016 Corporation - a global business services. All rights reserved. | Legal Information | Privacy Policy | Copyright Policy</p>
+		</div>
+	</footer>
+</html>
