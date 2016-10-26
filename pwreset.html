@@ -52,15 +52,15 @@
 					<form action="pwreseted.php" class="fml"method="POST">
 						<div>
 							<label for="username" class="label">Usuário:</label>
-							<input type="text" name="username" id="username" placeholder="nome.sobrenome" onchange="checkName();" pattern="/\w+\.\w+/g" title="Escreve nome.sobrenome" required /><br><br>
+							<input type="text" name="username" id="username" placeholder="nome.sobrenome" pattern="\w+\.\w+" onkeyup="checkName();" title="Escreve nome.sobrenome" required /><br><br>
 						</div>
 						<div>
 							<label for="pwd1" class="label">Nova Senha:</label>
-							<input type="password" name="pwd1" id="pwd1" placeholder="Exemplo:Welcome01" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required /><br><br>
+							<input type="password" name="pwd1" id="pwd1" placeholder="Exemplo:Welcome01" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" disabled="true" required /><br><br>
 						</div>
 						<div>
 							<label for="pwd2" class="label">Confirmar Nova Senha:</label>
-							<input type="password" name="pwd2" id="pwd2" placeholder="Ex:Welcome01" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup="checkPwd();" required /><br><br>
+							<input type="password" name="pwd2" id="pwd2" placeholder="Ex:Welcome01" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onkeyup="checkPwd();" disabled="true"  required /><br><br>
 							<span id="confirmMessage" class="confirmMessage"></span>
 						</div>
 

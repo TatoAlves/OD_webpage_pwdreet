@@ -4,23 +4,26 @@
   function checkName(){
 
     var usr = document.getElementById('username');
-
+    var pwi1 = document.getElementById('pwd1');
+    var pwi2 = document.getElementById('pwd2');
 
     var btnVerify = document.getElementById('updatep');
     var message = document.getElementById('confirmMessage');
-
-    var blaColor = "#66cc66";
+    var regx = new RegExp('\w+\.\w+', 'g');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
 
 
     //Verification User name field
 
-    if(usr.value == ""){
-      usr.effect(
-        "shake", { times:3 }, 300
-      );
+    if(regx.test(usr) == true){
+      pwi1.disabled = false;
+      usr.style.backgroundColor = goodColor;
+    }else{
+      pwi1.disabled = true;
+      usr.style.backgroundColor = badColor;
     }
   }
-
 
   function checkPwd(){
     var pass1 = document.getElementById('pwd1');
@@ -30,7 +33,7 @@
 
     var goodColor = "#66cc66";
     var badColor = "#ff6666";
-    var regx = "\w{8,16}";
+
 
     var cmduser = "";
 

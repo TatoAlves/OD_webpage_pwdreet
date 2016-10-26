@@ -75,7 +75,7 @@
 					              #echo '<br>retval: ' . $retval;
 								    		#echo '<br>Comando executado: ' . $cmd;
 												*/
-					              if($retval == 0){
+					              if($ret_pw == 0){
 					                echo '<div class="page-header">';
 					                echo '<h2>';
 					                echo '<span class="">Senha para usuário: ' . $user . ' foi modificada para <i>' . $pwd . '</i></span>';

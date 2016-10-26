@@ -1,6 +1,13 @@
 body {
   background-color: currentColor;
 }
+
+#logotop{
+  max-width: 20%;
+  max-height: 30%;
+  margin: 30px 20px 30px 20px;
+}
+
 .flogo {
   margin: 10px 80px 10px 50px;
   display: block;
