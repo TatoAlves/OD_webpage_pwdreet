@@ -9,14 +9,15 @@
 
     var btnVerify = document.getElementById('updatep');
     var message = document.getElementById('confirmMessage');
-    var regx = new RegExp('\w+\.\w+', 'g');
+    //var regx = new RegExp("[0-9A-Za-z]+\.[0-9A-Za-z]+", 'g');
+    var reg = /[A-Za-z0-9]+\.[A-Za-z0-9]+/;
     var goodColor = "#66cc66";
     var badColor = "#ff6666";
 
 
     //Verification User name field
 
-    if(regx.test(usr) == true){
+    if(reg.test(usr.value) == true){
       pwi1.disabled = false;
       usr.style.backgroundColor = goodColor;
     }else{
@@ -38,6 +39,7 @@
     var cmduser = "";
 
     //Verification Password fields
+
     if(pass1.value == pass2.value){
       pass1.style.backgroundColor = goodColor;
       pass2.style.backgroundColor = goodColor;
